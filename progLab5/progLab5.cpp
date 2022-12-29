@@ -10,7 +10,7 @@ int count(int k)
     {
         i++;
         k /= 10;
-    } while (k > 0);
+    } while (k != 0);
     return i;
 }
 
@@ -21,7 +21,7 @@ int main()
     cin >> n;
     double sum = 0;
     for (int i = 1; i <= n; i++)
-        sum += count(i) / (i * i);
+        sum += (double)count(i) / (i * i);
     cout << "Result: " << sum << endl;
     
     cout << "Part b\nInput natural number n:\n";
